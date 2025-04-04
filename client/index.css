@@ -7,15 +7,22 @@ body {
 }
 
 header {
-    background: url('floral-border.png') no-repeat center;
-    background-size: contain;
-    padding: 50px 0;
+    margin: 20px;
+}
+
+.title-box {
+    display: inline-block;
+    padding: 20px;
+    background-image: url('floral-border.png'); /* Image d'encadré floral */
+    background-size: cover;
+    background-position: center;
+    border: 5px solid #6E3F3B;
+    border-radius: 15px;
+    color: #4A2C2A;
     font-size: 24px;
-    font-weight: bold;
 }
 
 h1 {
-    color: #4A2C2A;
     margin: 0;
 }
 
@@ -51,6 +58,32 @@ input, select, textarea {
 
 textarea {
     resize: none;
+}
+
+#themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.theme-option {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.theme-option:hover {
+    background-color: #d4a5a5;
+}
+
+.theme-option.selected {
+    border: 2px solid #6E3F3B;
+    background-color: #6E3F3B;
+    color: white;
 }
 
 button {

@@ -1,14 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const themeOptions = document.querySelectorAll(".theme-option");
+
+    themeOptions.forEach(option => {
+        option.addEventListener("click", function () {
+            this.classList.toggle("selected");
+        });
+    });
+
     document.getElementById("book-form").addEventListener("submit", function (event) {
         event.preventDefault();
 
         let title = document.getElementById("title").value;
         let type = document.getElementById("type").value;
-        let themes = Array.from(document.getElementById("themes").selectedOptions).map(opt => opt.value);
         let audience = document.getElementById("audience").value;
         let summary = document.getElementById("summary").value;
 
-        if (!title || !type || themes.length === 0 || !audience || !summary) {
+        let selectedThemes = [];
+        document.querySelectorAll(".theme-option.selected").forEach(theme => {
+            selectedThemes.push(theme.getAttribute("data-value"));
+        });
+
+        if (!title || !type || selectedThemes.length === 0 || !audience || !summary) {
             alert("Veuillez remplir tous les champs !");
             return;
         }
@@ -16,12 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log({
             title: title,
             type: type,
-            themes: themes,
+            themes: selectedThemes,
             audience: audience,
             summary: summary
         });
 
         alert("Données soumises avec succès !");
         this.reset();
+        document.querySelectorAll(".theme-option").forEach(theme => theme.classList.remove("selected"));
     });
 });

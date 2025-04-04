@@ -8,7 +8,9 @@
 </head>
 <body>
     <header>
-        <h1>Bibli'Invent</h1>
+        <div class="title-box">
+            <h1>Bibli'Invent</h1>
+        </div>
     </header>
 
     <main>
@@ -28,18 +30,18 @@
                 <option value="conte">Conte</option>
             </select>
 
-            <label for="themes">Thèmes abordés :</label>
-            <select id="themes" name="themes" multiple required>
-                <option value="action">Action</option>
-                <option value="animation">Animation</option>
-                <option value="comédie">Comédie</option>
-                <option value="drame">Drame</option>
-                <option value="romance">Romance</option>
-                <option value="fantastique">Fantastique</option>
-                <option value="science-fiction">Science-fiction</option>
-                <option value="thriller">Thriller</option>
-                <option value="horreur">Horreur</option>
-            </select>
+            <label>Thèmes abordés :</label>
+            <div id="themes">
+                <div class="theme-option" data-value="action">Action</div>
+                <div class="theme-option" data-value="animation">Animation</div>
+                <div class="theme-option" data-value="comédie">Comédie</div>
+                <div class="theme-option" data-value="drame">Drame</div>
+                <div class="theme-option" data-value="romance">Romance</div>
+                <div class="theme-option" data-value="fantastique">Fantastique</div>
+                <div class="theme-option" data-value="science-fiction">Science-fiction</div>
+                <div class="theme-option" data-value="thriller">Thriller</div>
+                <div class="theme-option" data-value="horreur">Horreur</div>
+            </div>
 
             <label for="audience">Public concerné :</label>
             <select id="audience" name="audience" required>
