@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("book-form").addEventListener("submit", function (event) {
+        console.log("🚀 Form submitted!");
         event.preventDefault();
 
         let title = document.getElementById("title").value;
