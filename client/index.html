@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibli'Invent</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Bibli'Invent</h1>
+    </header>
+
+    <main>
+        <p class="question">Quelles sont les caractéristiques de votre œuvre ?</p>
+
+        <form id="book-form">
+            <label for="title">Titre :</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="type">Type :</label>
+            <select id="type" name="type" required>
+                <option value="">-- Sélectionnez --</option>
+                <option value="poésie">Poésie</option>
+                <option value="roman">Roman</option>
+                <option value="théâtre">Pièce de théâtre</option>
+                <option value="nouvelle">Nouvelle</option>
+                <option value="conte">Conte</option>
+            </select>
+
+            <label for="themes">Thèmes abordés :</label>
+            <select id="themes" name="themes" multiple required>
+                <option value="action">Action</option>
+                <option value="animation">Animation</option>
+                <option value="comédie">Comédie</option>
+                <option value="drame">Drame</option>
+                <option value="romance">Romance</option>
+                <option value="fantastique">Fantastique</option>
+                <option value="science-fiction">Science-fiction</option>
+                <option value="thriller">Thriller</option>
+                <option value="horreur">Horreur</option>
+            </select>
+
+            <label for="audience">Public concerné :</label>
+            <select id="audience" name="audience" required>
+                <option value="">-- Sélectionnez --</option>
+                <option value="enfant">Enfant</option>
+                <option value="adolescent">Adolescent</option>
+                <option value="adulte">Adulte</option>
+            </select>
+
+            <label for="summary">Résumé :</label>
+            <textarea id="summary" name="summary" rows="10" required></textarea>
+
+            <button type="submit">Soumettre</button>
+        </form>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
