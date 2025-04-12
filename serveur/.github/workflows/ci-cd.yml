@@ -2,7 +2,7 @@ name: CI/CD Pipeline node.js
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "feature/serveur" ]
   pull_request:
     branches: [ "main" ]
 
