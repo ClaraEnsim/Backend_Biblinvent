@@ -1,4 +1,4 @@
-name: CI/CD Pipeline node.js Biblinvent
+name: CI/CD Pipeline node.js
 
 on:
   push:
@@ -25,12 +25,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./serveur 
 
       - name: Build (if present)
         run: npm run build --if-present
-        working-directory: ./serveur 
 
       - name: Run tests
         run: npm test
-        working-directory: ./serveur  
