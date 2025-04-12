@@ -67,6 +67,7 @@ Afin de vérifier le fonctionnement de la BDD, j'ai utilisé DBeaver et dans Doc
     7. J'ai déposé l'ensemble des fichiers sur GitHub au fur et à mesure des modifications. 
 
 ### Perspective d'amélioration : 
+- Faire fonctionner la CI : elle fonctionne mais il y a des erreurs que je n'arrive pas à régler mais qui sont sûrement dûes aux répertoires et aux chemins d'accès, comme le fait que mes fichiers de test sont dans le dossier serveur et que la CI devrait se situer dans la racine du projer. 
 - Relier le back et le front afin que quand je valide mon questionnaire front, ceci me génère les maisons d'édition que je souhaite, comme ce qui se fait en interne, dans le back, dans DBeaver quand on le teste, par exemple. 
 - Ajouter plus d'éditeurs afin d'avoir une génération plus complète. 
 
